@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge #2</title>
+  </head>
+  <body>
+    <script>
+      class CarCl {
+        constructor(make, speed) {
+          this.make = make;
+          this.speed = speed;
+        }
+        accelerate() {
+          this.speed += 10;
+          console.log(`${this.make} is going at ${this.speed} km/h`);
+        }
+        brake() {
+          this.speed -= 5;
+          console.log(`${this.make} is going at ${this.speed} km/h`);
+        }
+        get speedUS() {
+          return this.speed / 1.6;
+        }
+        set speedUS(speed) {
+          this.speed * 1.6;
+        }
+      }
+      const ford = new CarCl("Ford", 120);
+      console.log(ford.speedUS);
+      ford.accelerate();
+      ford.brake();
+    </script>
+  </body>
+</html>
